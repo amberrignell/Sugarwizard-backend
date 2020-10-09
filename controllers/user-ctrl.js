@@ -65,7 +65,7 @@ createUser = async (req, res) => {
 
 updateUser = async (req, res) => {
   const body = req.body;
-
+  console.log(body);
   if (!body) {
     return res.status(400).json({
       success: false,
@@ -80,8 +80,8 @@ updateUser = async (req, res) => {
         message: "User not found!",
       });
     }
-    user.glucose_reading.push(...body.glucose_reading);
-    user.time.push(...body.time);
+    user.glucose_reading.push(parseFloat(body.glucose_reading));
+    user.time.push(body.time);
     user
       .save()
       .then(() => {
