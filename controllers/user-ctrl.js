@@ -42,11 +42,9 @@ createUser = async (req, res) => {
         return user
           .save()
           .then((user) => {
-            console.log(user);
             const token = jwt.sign({ user: user._id }, SECRET, {
               expiresIn: "1h",
             });
-            console.log("token: ", token);
             return res.status(200).json({ token });
           })
           .catch((error) => {
@@ -67,7 +65,6 @@ createUser = async (req, res) => {
 
 updateUser = async (req, res) => {
   const body = req.body;
-  console.log(body);
   if (!body) {
     return res.status(400).json({
       success: false,
@@ -123,7 +120,7 @@ loginUser = async (req, res) => {
     return res.status(401).json({ success: false, error: err });
   }
   if (user && bcrypt.compare(password, user.password)) {
-    const token = jwt.sign({ user: user.user._id }, SECRET, {
+    const token = jwt.sign({ user: user._id }, SECRET, {
       expiresIn: "1h",
     });
     return res.status(200).json({ success: true, token: token });
