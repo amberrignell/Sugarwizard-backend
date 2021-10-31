@@ -3,7 +3,7 @@ This is the backend for the [Sugarwizard app](https://sugarwizard.netlify.app/) 
 ## Setup to run locally:
 Go to [MongoDB](https://www.mongodb.com/) and create a database, a user and a free Shared Tier Cluster (you can use any cloud provider or region) <br>
 Go to connect -> connect your application and set the .env DATABASE_URL to the connection string. <br> 
-Set the .env SECRET to a random string. <br>
+Set the .env JWT_SECRET to a random string. <br>
 Run `npm i` then `npm start` and the server should be running on localhost:3000. <br>
 
 User model:
