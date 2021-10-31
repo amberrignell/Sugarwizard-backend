@@ -20,10 +20,12 @@ User model:
 REST API with four routes:
 
 ## Post /login —> calls loginUser
+  ```
   {
-  "email": "",
-  "password": "",
+    "email": "",
+    "password": "",
   }
+  ```
 
 * Get the email and password from the request
 * Find a user with the same email
@@ -31,12 +33,14 @@ REST API with four routes:
 * Create and return a JWT token with the user id as the payload
 
 ## Post /signup ==> calls createUser:
+  ```
   {
-  "email": "",
-  "password": "",
-  "insulinRatio": 1,
-  "carbRatio": 1
+    "email": "",
+    "password": "",
+    "insulinRatio": 1,
+    "carbRatio": 1
   }
+  ```
 
 - check if there is an existing user with that email
 - hash the password with bcrypt and set the hash as the password’s value
@@ -46,9 +50,11 @@ REST API with four routes:
 - Return the token
 
 ## Put /store-data —> calls authentication middleware and updateUser
+   ```
   {
   "glucose_reading": 1,
   "time": ""
   }
+  ```
 
 ## Get /profile —> calls authentication middleware and getUserById
