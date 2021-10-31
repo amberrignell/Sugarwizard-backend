@@ -19,9 +19,9 @@ User model:
 { timestamps: true },
 ```
 
-REST API with four routes (see postman collection [here](https://www.getpostman.com/collections/a8e0a55c4f4b0f03c50f)):
+REST API with four routes (see **postman collection** [here](https://www.getpostman.com/collections/a8e0a55c4f4b0f03c50f)):
 
-## Post /login —> calls loginUser
+## Post /api/login —> calls loginUser
   ```
   {
     "email": "",
@@ -34,7 +34,7 @@ REST API with four routes (see postman collection [here](https://www.getpostman.
 * Compare the password with the hash for that user using bcrypt.compare
 * Create and return a JWT token with the user id as the payload
 
-## Post /signup ==> calls createUser:
+## Post /api/signup ==> calls createUser:
   ```
   {
     "email": "",
@@ -51,7 +51,7 @@ REST API with four routes (see postman collection [here](https://www.getpostman.
 - Create a token using JWT
 - Return the token
 
-## Put /store-data —> calls authentication middleware and updateUser
+## Put /api/store-data —> calls authentication middleware and updateUser
    ```
   {
   "glucose_reading": 1,
@@ -59,4 +59,4 @@ REST API with four routes (see postman collection [here](https://www.getpostman.
   }
   ```
 
-## Get /profile —> calls authentication middleware and getUserById
+## Get /api/profile —> calls authentication middleware and getUserById
