@@ -1,19 +1,21 @@
 ## Setup to run locally:
-Log into MongoDB and create a free Shared Tier Cluster. 
-Go to connect -> connect your application and set the .env DATABASE_URL to the connection string. 
-Set the .env SECRET to a random string. 
-Run `npm i` then `npm start` and the server should be running on localhost:3000. 
+Go to [MongoDB](https://www.mongodb.com/) and create a free Shared Tier Cluster. <br>
+Go to connect -> connect your application and set the .env DATABASE_URL to the connection string. <br> 
+Set the .env SECRET to a random string. <br>
+Run `npm i` then `npm start` and the server should be running on localhost:3000. <br>
 
 User model:
+```
 {
-email: { type: String, required: true },
-password: {type: String, required: true},
-insulinRatio: { type: Number, required: true},
-carbRatio: { type: Number, required: true},
-glucose_reading: { type: Array },
-time: { type : Array }
+  email: { type: String, required: true },
+  password: {type: String, required: true},
+  insulinRatio: { type: Number, required: true},
+  carbRatio: { type: Number, required: true},
+  glucose_reading: { type: Array },
+  time: { type : Array }
 },
 { timestamps: true },
+```
 
 REST API with four routes:
 
