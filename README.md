@@ -1,3 +1,5 @@
+This is the backend for the [Sugarwizard app](https://sugarwizard.netlify.app/) - an open source web app to help diabetics calculate their insulin dosage. 
+
 ## Setup to run locally:
 Go to [MongoDB](https://www.mongodb.com/) and create a free Shared Tier Cluster. <br>
 Go to connect -> connect your application and set the .env DATABASE_URL to the connection string. <br> 
