@@ -19,7 +19,7 @@ User model:
 { timestamps: true },
 ```
 
-REST API with four routes:
+REST API with four routes (see postman collection [here](https://www.getpostman.com/collections/a8e0a55c4f4b0f03c50f)):
 
 ## Post /login —> calls loginUser
   ```
