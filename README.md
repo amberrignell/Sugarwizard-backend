@@ -1,4 +1,4 @@
-Setup to run locally:
+## Setup to run locally:
 Log into MongoDB and create a free Shared Tier Cluster
 Go to connect -> connect your application and set the .env DATABASE_URL to the connection string
 Set the .env SECRET to a random string
@@ -17,7 +17,7 @@ time: { type : Array }
 
 REST API with four routes:
 
-- Post /login —> calls loginUser
+## Post /login —> calls loginUser
   {
   "email": "",
   "password": "",
@@ -28,7 +28,7 @@ REST API with four routes:
 * Compare the password with the hash for that user using bcrypt.compare
 * Create and return a JWT token with the user id as the payload
 
-- Post /signup ==> calls createUser:
+## Post /signup ==> calls createUser:
   {
   "email": "",
   "password": "",
@@ -43,10 +43,10 @@ REST API with four routes:
 - Create a token using JWT
 - Return the token
 
-* Put /store-data —> calls authentication middleware and updateUser
+## Put /store-data —> calls authentication middleware and updateUser
   {
   "glucose_reading": 1,
   "time": ""
   }
 
-* Get /profile —> calls authentication middleware and getUserById
+## Get /profile —> calls authentication middleware and getUserById
