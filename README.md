@@ -1,6 +1,6 @@
 Setup a database for your dev environment:
-Log into MongoDB and create a database with a collection called jalf
-Run `brew install mongosh`
+Log into MongoDB and create a free Shared Tier Cluster
+Go to connect -> connect your application and set the .env DATABASE_URL to the connection string
 
 User model:
 {
@@ -16,6 +16,10 @@ time: { type : Array }
 REST API with four routes:
 
 - Post /login —> calls loginUser
+  {
+  "email": "",
+  "password": "",
+  }
 
 * Get the email and password from the request
 * Find a user with the same email
@@ -23,14 +27,24 @@ REST API with four routes:
 * Create and return a JWT token with the user id as the payload
 
 - Post /signup ==> calls createUser:
+  {
+  "email": "",
+  "password": "",
+  "insulinRatio": 1,
+  "carbRatio": 1
+  }
 
-* check if there is an existing user with that email
-* hash the password with bcrypt and set the hash as the password’s value
-* create a user using the user model
-* Save the user
-* Create a token using JWT
-* Return the token
+- check if there is an existing user with that email
+- hash the password with bcrypt and set the hash as the password’s value
+- create a user using the user model
+- Save the user
+- Create a token using JWT
+- Return the token
 
-- Put /store-data —> calls authentication middleware and updateUser
+* Put /store-data —> calls authentication middleware and updateUser
+  {
+  "glucose_reading": 1,
+  "time": ""
+  }
 
-- Get /profile —> calls authentication middleware and getUserById
+* Get /profile —> calls authentication middleware and getUserById
