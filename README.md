@@ -1,6 +1,8 @@
-Setup a database for your dev environment:
+Setup to run locally:
 Log into MongoDB and create a free Shared Tier Cluster
 Go to connect -> connect your application and set the .env DATABASE_URL to the connection string
+Set the .env SECRET to a random string
+Run `npm i` then `npm start` and the server should be running on localhost:3000
 
 User model:
 {
